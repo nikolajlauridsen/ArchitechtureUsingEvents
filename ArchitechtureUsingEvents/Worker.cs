@@ -22,7 +22,7 @@ namespace ArchitechtureUsingEvents
 
         public void SetTextValue()
         {
-            screen.MessageLength.MessageLength = screen.Answer.Length.ToString();
+            screen.MessageLength.MessageLength = message.MyMessage.Length.ToString();
             message.MyMessage = screen.Answer;
         }
     }

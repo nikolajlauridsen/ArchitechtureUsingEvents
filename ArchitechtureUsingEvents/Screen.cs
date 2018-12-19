@@ -15,7 +15,7 @@ namespace ArchitechtureUsingEvents
         public Screen(IMessage message, MLength mLength)
         {
             MessageLength = mLength;
-            TextValue = message.MyMessage + $" length: {MessageLength.MessageLength}";
+            TextValue = message.MyMessage;
             Warning = "Nothing to warn about";
 
             //Screen needs to add its MessageSetEventHandler method
@@ -30,8 +30,8 @@ namespace ArchitechtureUsingEvents
         {
             //sender is not used as all information needed is in customArgs
 
-            TextValue = customArgs.MessageAfter + $" length: {MessageLength.MessageLength}";
-            Warning = $"Text changed from: \"{customArgs.MessageBefore}\"";
+            TextValue = customArgs.MessageAfter;
+            Warning = $"Text changed from: \"{customArgs.MessageBefore}\" which had the length: {MessageLength.MessageLength}";
         }
 
         public void ShowScreen()
